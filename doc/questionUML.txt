@@ -1,26 +1,31 @@
-Ecrire ici votre réponse à la question UML.
-
-Modèle UML n1(composition)
+Modèle UML n1 (composition)
+Ce modèle utilise la composition pour séparer les différentes responsabilités : l’événement, la répétition et la terminaison sont gérés par des classes distinctes.
 
 Avantages :
-Très flexible et extensible : facile d’ajouter de nouvelles répétitions ou terminaisons.
-Conforme aux spécifications : les répétitions et terminaisons sont optionnelles et non des sous-types fixes.
-Permet de gérer des agendas complexes, avec exceptions et règles variées.
+
+Très flexible et facile à faire évoluer. Par exemple, on peut ajouter 
+de nouveaux types de répétition ou de terminaison sans toucher aux autres classes.
+Conforme aux spécifications : les répétitions et terminaisons sont 
+optionnelles et non imposées par des sous-classes fixes.
+Idéal pour gérer des agendas complexes avec des règles particulières et 
+des exceptions.
+
 Inconvénients :
-Plus complexe  à implémenter pour un simple événement.
-Crée plus d’objets et de relations, ce qui alourdit le code.
+Plus compliqué à mettre en place pour des événements simples.
+Crée plus de classes et de relations, ce qui rend le code un peu plus lourd et peut être difficile à comprendre au début.
 
-Modèle UML n°2 (héritage)
-
-Modéle UML n2 
+Modèle UML n2 (héritage)
+Ici, on utilise l’héritage : les sous-classes représentent directement les types d’événements.
 Avantages :
-Simple et intuitif : les sous-classes représentent directement les types d’événements.
-Moins d’objets auxiliaires, diagramme plus compact.
-Idéal pour des agendas simples et un développement rapide.
+Simple et intuitif : on comprend facilement les différents types d’événements.
+Moins de classes et de relations, donc le diagramme est plus compact.
+Pratique pour des agendas simples et un développement rapide.
+
 Inconvénients :
-Moins flexible : ajouter de nouvelles règles nécessite de créer de nouvelles sous-classes.
-Rigidifie le système et complique l’évolution pour des cas complexes.
-Moins conforme aux spécifications orientées objet : les répétitions deviennent des types fixes plutôt que des options.
+Moins flexible : ajouter de nouvelles règles ou types de répétitions oblige à 
+créer de nouvelles sous-classes.
+Rigidifie le système et complique l’évolution pour des agendas plus complexes.
+Les répétitions deviennent des types fixes, ce qui limite la flexibilité.
 
 
 =>Le modèle UML n°1 est idéal pour gérer des agendas complexes : il sépare clairement les responsabilités (Event, Repetition, Termination),
@@ -30,3 +35,6 @@ Le modèle UML n°2, en revanche, est plus simple et intuitif, avec moins de cla
 ce qui le rend rapide à utiliser pour un agenda simple. Mais il est moins flexible : l’héritage rigidifie la structure, rend difficile l’ajout de nouvelles règles de répétition ou de terminaison,
 et peut générer trop de sous-classes si l’agenda évolue.
 =>En résumé, le modèle 1 est plus robuste et extensible, tandis que le modèle 2 est plus léger et facile pour des besoins simples.
+
+=>en fin pour ce projet d’agenda, je constate que le modèle UML n°1, 
+basé sur la composition, est le plus adapté car il est flexible, extensible et permet de gérer facilement les répétitions et exceptions.
